@@ -16,7 +16,7 @@ def returnCliente(cpf):
     return buscaCliente(cpf)
 
 
-@app.route('/cliente/<cpf>', methods=['POST'])
+@app.route('/cliente/<cpf>', methods=['PUT'])
 def updateJson(cpf):
     content = request.get_json(silent=True)
     return atualizaDados(cpf, content)
