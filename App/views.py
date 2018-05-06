@@ -2,8 +2,10 @@ from flask import Flask, request
 from App.models import listaCliente, buscaCliente, atualizaDados
 import json
 from flask import Response
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 
 @app.route('/cliente', methods=['GET'])
